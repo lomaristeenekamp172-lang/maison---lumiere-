@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#17110A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Maison Lumiere">
+<title>Maison Lumiere Candles</title>
+<style>
+:root{--bg:#17110A;--card:#241a10;--gold:#c9a24b;--tx:#f3e9d8;--mut:#b9a98f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Georgia,'Times New Roman',serif;padding-bottom:70px}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:5;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid #3a2c1a}
+header b{color:var(--gold);font-size:18px;letter-spacing:.05em}
+#mb{background:none;border:0;color:var(--tx);font-size:24px}
+nav#m{display:none;position:fixed;inset:0;background:var(--bg);z-index:9;padding:60px 24px;flex-direction:column;gap:18px;font-size:20px}
+nav#m.o{display:flex}
+nav#m button{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--tx);font-size:24px}
+section{padding:36px 18px;max-width:640px;margin:auto}
+h2{color:var(--gold);font-weight:400;margin:0 0 6px;font-size:26px}
+.sub{color:var(--mut);margin:0 0 18px;font-size:14px}
+.hero{text-align:center;padding:56px 18px 40px}
+.hero small{color:var(--mut);letter-spacing:.1em}
+.hero h1{font-size:44px;font-weight:400;margin:14px 0}
+.btn{display:inline-block;background:var(--gold);color:#17110A;padding:12px 26px;border-radius:30px;border:0;font:inherit;font-weight:bold;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px}
+.chip{border:1px solid var(--gold);border-radius:20px;padding:7px 14px;font-size:14px;background:none;color:var(--tx);font-family:inherit;cursor:pointer}
+.chip.on{background:var(--gold);color:#17110A}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:var(--card);border-radius:12px;padding:14px;border:1px solid #3a2c1a}
+.card h3{margin:6px 0 2px;font-size:16px;font-weight:400}.card p{margin:2px 0;color:var(--mut);font-size:13px}
+.em{font-size:28px}
+.earn{background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:20px}
+.earn h3{margin:18px 0 8px;color:var(--gold);font-weight:400;font-size:18px}
+.earn ul{margin:0;padding-left:18px;color:var(--tx);font-size:15px;line-height:1.7}
+.price{font-size:28px;color:var(--gold)}
+.opt{display:block;background:var(--card);border:1px solid #3a2c1a;border-radius:10px;padding:13px;margin:8px 0;cursor:pointer}
+.opt input{margin-right:10px;accent-color:var(--gold)}
+.opt:has(input:checked){border-color:var(--gold)}
+.verse{text-align:center;font-style:italic;color:var(--mut);padding:10px 24px}
+details.folder{background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:6px 16px}
+details.folder summary{cursor:pointer;padding:12px 0;font-size:18px;color:var(--gold)}
+.ph{aspect-ratio:1;background:#2e2214;border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:12px;text-align:center;padding:6px;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.tab{position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid #3a2c1a;display:flex;justify-content:space-around;padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px));font-size:12px;z-index:5}
+.tab a{text-align:center;color:var(--mut)}
+#qa button{display:block;width:100%;text-align:left;margin:8px 0}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:20px}
+</style>
+</head>
+<body>
+<header><b>Maison Lumiere</b><button id="mb" aria-label="Menu">☰</button></header>
+<nav id="m"><button id="mx" aria-label="Close">✕</button>
+<a href="#home">Home</a><a href="#shop">Shop All Candles</a><a href="#quiz">Scent Quiz</a><a href="#pricing">Pricing</a><a href="#earn">Earn More</a><a href="#contact">Contact &amp; Orders</a><a href="#vote">Vote — Next Scent ✨</a><a href="#gallery">Examples of Our Candles 📁</a></nav>
+
+<div class="hero" id="home"><small>Hand-Poured Luxury • Standerton</small><h1>Light. Scent. Elevate.</h1><p style="color:var(--mut)">Luxury candles made to elevate every moment.</p><a class="btn" href="#shop">Shop Now</a>
+<div class="chips"><a class="chip" href="#shop">Shop All</a><a class="chip" href="#quiz">Scent Quiz</a><a class="chip" href="#pricing">Gifts</a><a class="chip" href="#earn">Earn More</a><a class="chip" href="#vote">Vote</a></div></div>
+
+<section id="earn"><div class="earn"><h2>Earn More</h2><p class="sub">Earn points on every candle and unlock rewards.</p>
+<h3>Earn points</h3><ul><li>Every R10 spent = 1 point</li><li>Share your candle photo on Instagram = 5 points</li><li>Vote for the next scent = 2 points</li><li>Refer a friend who orders = 10 points</li></ul>
+<h3>Win perks</h3><ul><li>50 points: free Petite candle</li><li>100 points: free gift wrapping and a surprise scent</li><li>Monthly draw: win a Candle Mystery Box</li></ul>
+<p style="margin:16px 0 0"><a class="btn" href="#contact">Join Now</a></p></div></section>
+
+<section id="best"><h2>Best Sellers</h2><p class="sub">Our customers' favourites</p><div class="grid" id="bs"></div></section>
+<p class="verse">"I am the light of the world. Whoever follows me will never walk in darkness, but will have the light of life."<br>— John 8:12</p>
+
+<section id="shop"><h2>Scent Catalogue</h2><p class="sub">All 20 scents · Custom combinations welcome</p>
+<div class="chips" id="fl" style="justify-content:flex-start;margin:0 0 14px"></div><div class="grid" id="cat"></div></section>
+
+<section id="quiz"><h2>Scent Quiz</h2><p class="sub">Discover your perfect candle in 4 questions</p>
+<div class="card"><p id="qn"></p><div id="qa"></div><div id="qr" style="display:none;text-align:center"><h3>Your Perfect Match ✦</h3><p class="price" id="qm"></p><a class="btn" href="tel:0823073755">Order This Scent</a> <button class="chip" id="qt">Take Again</button></div></div></section>
+
+<section id="pricing"><h2>Price List</h2><p class="sub">All 20 scents available in every size</p>
+<div class="grid" style="grid-template-columns:1fr"><div class="card"><h3>Petite</h3><p>150-180ml · 20-25 hrs</p><div class="price">R50</div><p>Single or double wick</p></div>
+<div class="card" style="border-color:var(--gold)"><h3>Maison ★ Most Popular</h3><p>250-300ml · 35-45 hrs</p><div class="price">R75</div><p>Double or triple wick</p></div>
+<div class="card"><h3>Lumiere</h3><p>400-500ml · 55-65 hrs</p><div class="price">R100</div><p>Triple wick</p></div></div></section>
+
+<section><h2>Special Collections</h2><div class="grid" style="grid-template-columns:1fr">
+<div class="card"><h3>👶 Baby Shower Reveal Candles</h3><p>Custom colour reveal — light it to discover the gender</p></div>
+<div class="card"><h3>🎄 Seasonal Candles</h3><p>Christmas Mystery, Pumpkin Spice &amp; limited festive drops</p></div>
+<div class="card"><h3>🎁 Candle Mystery Box</h3><p>A curated surprise selection — perfect for gifting</p></div></div></section>
+
+<section id="vote"><h2>Help Create Our Next Candle</h2><p class="sub">Community Vote · pick your favourite</p>
+<div id="vl"></div><button class="btn" id="vb" style="margin-top:12px">Cast Your Vote</button>
+<div class="card" id="vt" style="display:none;text-align:center"><h3>Thank You for Voting! ✨</h3><p>We'll announce the winning scent on Instagram!</p></div></section>
+
+<section id="gallery"><details class="folder" open><summary>📁 Examples of how our candles look</summary>
+<p class="sub">A look at our candles. Add your own photos below.</p>
+<div class="grid" style="grid-template-columns:repeat(3,1fr)" id="gg"></div>
+<p style="margin:14px 0"><label class="btn" style="font-size:14px">📷 Camera<input type="file" accept="image/*" capture="environment" hidden id="gc"></label> <label class="btn" style="font-size:14px">🖼 Library<input type="file" accept="image/*" multiple hidden id="gl"></label></p></details></section>
+
+<section id="contact"><h2>Contact &amp; Orders</h2><div class="card"><h3>Lomari Steenekamp</h3><p>Founder &amp; Candle Artisan · Standerton, Mpumalanga</p><p style="margin-top:12px"><a class="btn" href="tel:0823073755">📞 Call to Order — 082 307 3755</a></p><p style="margin-top:12px"><a href="https://www.instagram.com/maisonlumierecandles" style="color:var(--gold)">📷 Instagram @Maison Lumiere</a></p></div></section>
+<footer>Made in Standerton</footer>
+
+<div class="tab"><a href="#home">🏠<br>Home</a><a href="#shop">🕯<br>Shop</a><a href="#quiz">🌸<br>Quiz</a><a href="#earn">🎁<br>Earn</a><a href="#vote">✨<br>Vote</a><a href="#gallery">📁<br>Examples</a></div>
+
+<script>
+const $=id=>document.getElementById(id);
+$('mb').onclick=()=>$('m').classList.add('o');
+$('mx').onclick=()=>$('m').classList.remove('o');
+$('m').querySelectorAll('a').forEach(a=>a.onclick=()=>$('m').classList.remove('o'));
+const S=[["Lavender Latte","☕","Latte"],["Iced Coffee Latte","🧊","Latte"],["Iced Vanilla Latte","🍦","Latte"],["Blueberry Latte","🫐","Latte"],["Caramel Apple","🍎","Sweet"],["Bubblegum","🍬","Sweet"],["Baby Powder","🌸","Floral"],["Wild Cherry","🍒","Sweet"],["Candy","🍬","Sweet"],["Candy Canes","🍭","Seasonal"],["Cookies","🍪","Baked"],["Chocolate Bliss","🍫","Sweet"],["Lemon Meringue","🍋","Baked"],["Hot Chocolate","🍵","Sweet"],["Cherry Blossoms","🌸","Floral"],["Milk & Cookies","🥛","Baked"],["Lemon Grass","🌿","Floral"],["Christmas Mystery","🎄","Seasonal"],["Blueberry Waffles","🧇","Baked"],["Pumpkin Spice","🎃","Seasonal"]];
+const B=[["Lavender Latte","Lavender · Vanilla · Coffee","★★★★★ (42)"],["Chocolate Bliss","Cocoa · Vanilla · Musk","★★★★★ (98)"],["Milk & Cookies","Butter · Vanilla · Sweet","★★★★½ (87)"],["Cherry Blossoms","Floral · Light · Fresh","★★★★½ (112)"]];
+$('bs').innerHTML=B.map(b=>`<div class="card"><h3>${b[0]}</h3><p>${b[1]}</p><p>${b[2]}</p><p class="price" style="font-size:20px">R75.00</p><a class="chip" href="tel:0823073755">Order</a></div>`).join('');
+const F=["All","Latte","Baked","Sweet","Floral","Seasonal"];let cur="All";
+function rc(){$('cat').innerHTML=S.filter(s=>cur=="All"||s[2]==cur).map(s=>`<div class="card"><div class="em">${s[1]}</div><h3>${s[0]}</h3><p>${s[2]}</p></div>`).join('');
+$('fl').innerHTML=F.map(f=>`<button class="chip ${f==cur?'on':''}" data-f="${f}">${f}</button>`).join('');
+$('fl').querySelectorAll('button').forEach(b=>b.onclick=()=>{cur=b.dataset.f;rc()})}
+rc();
+const Q=[["What mood do you want?",[["Cosy","Latte"],["Sweet treat","Sweet"],["Fresh","Floral"],["Bakery warm","Baked"]]],["Pick a time of day",[["Morning","Latte"],["Afternoon","Floral"],["Evening","Baked"],["Late night","Sweet"]]],["Favourite flavour",[["Coffee","Latte"],["Cookies","Baked"],["Candy","Sweet"],["Flowers","Floral"]]],["Where will it burn?",[["Bedroom","Floral"],["Living room","Baked"],["Kitchen","Sweet"],["Bathroom","Latte"]]]];
+const R={Latte:"Lavender Latte",Baked:"Milk & Cookies",Sweet:"Chocolate Bliss",Floral:"Cherry Blossoms"};
+let qi=0,sc={};
+function rq(){if(qi>=4){let t=Object.keys(sc).sort((a,b)=>sc[b]-sc[a])[0];$('qn').style.display=$('qa').style.display='none';$('qr').style.display='block';$('qm').textContent=R[t];return}
+$('qn').style.display=$('qa').style.display='block';$('qr').style.display='none';
+$('qn').textContent=`Question ${qi+1} of 4 — ${Q[qi][0]}`;
+$('qa').innerHTML=Q[qi][1].map((o,i)=>`<button class="chip" data-t="${o[1]}">${o[0]}</button>`).join('');
+$('qa').querySelectorAll('button').forEach(b=>b.onclick=()=>{sc[b.dataset.t]=(sc[b.dataset.t]||0)+1;qi++;rq()})}
+$('qt').onclick=()=>{qi=0;sc={};rq()};rq();
+const V=["Gummy Bear","Vanilla Blackberry","Donuts","Coffee","Cakes","Caramel Pudding","Coke","Fruit Carnival","Watermelon","Peppermint"];
+$('vl').innerHTML=V.map(v=>`<label class="opt"><input type="radio" name="v" value="${v}">${v}</label>`).join('');
+$('vb').onclick=()=>{const c=document.querySelector('input[name=v]:checked');if(!c){alert('Please pick a scent first');return}
+try{localStorage.setItem('mlvote',c.value)}catch(e){}$('vl').style.display=$('vb').style.display='none';$('vt').style.display='block'};
+const G=["Candle photo 1","Candle photo 2","Candle photo 3"];
+$('gg').innerHTML=G.map(g=>`<div class="ph">📷 ${g}</div>`).join('');
+function add(f){for(const x of f){const d=document.createElement('div');d.className='ph';const i=document.createElement('img');i.src=URL.createObjectURL(x);d.appendChild(i);$('gg').prepend(d)}}
+$('gc').onchange=e=>add(e.target.files);$('gl').onchange=e=>add(e.target.files);
+</script>
+</body>
+</html>
